@@ -1,0 +1,15 @@
+# DOCKER COMPOSE
+
+version: '2'
+
+networks:
+    main:
+
+services:
+    http_server:
+        image: nginx:latest
+        container_name: server
+        networks:
+            - main
+        ports:
+            - "777:80"
